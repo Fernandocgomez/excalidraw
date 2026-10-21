@@ -1,0 +1,22 @@
+{
+  "name": "excalidraw-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dev-only MCP server that lets an MCP client (e.g. Claude Code) edit the canvas of a locally running excalidraw-app",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "test:typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "ws": "8.18.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/ws": "8.18.1"
+  }
+}

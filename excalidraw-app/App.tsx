@@ -141,6 +141,7 @@ import DebugCanvas, {
   loadSavedDebugState,
 } from "./components/DebugCanvas";
 import { useSimulatedCollaborators } from "./debugCollaborators";
+import { useMcpBridge } from "./mcp/useMcpBridge";
 import { AIComponents } from "./components/AI";
 import { ExcalidrawPlusIframeExport } from "./ExcalidrawPlusIframeExport";
 
@@ -471,6 +472,10 @@ const ExcalidrawWrapper = () => {
   // collaborators for exercising avatar/UserList UI without a real
   // collab room
   useSimulatedCollaborators(excalidrawAPI);
+
+  // dev-only: lets an MCP client (e.g. Claude Code) edit the canvas through
+  // the local `mcp-server` workspace
+  useMcpBridge(excalidrawAPI);
 
   // ---------------------------------------------------------------------------
   // Hoisted loadImages

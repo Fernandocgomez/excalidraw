@@ -15,6 +15,9 @@ interface ImportMetaEnv {
   VITE_APP_PORTAL_URL: string;
   VITE_APP_AI_BACKEND: string;
 
+  // dev-only bridge to the local `mcp-server` workspace
+  VITE_APP_MCP_BRIDGE_URL: string;
+
   VITE_APP_FIREBASE_CONFIG: string;
 
   // whether to disable live reload / HMR. Usuaully what you want to do when
